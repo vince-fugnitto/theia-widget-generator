@@ -1,0 +1,48 @@
+{
+  "name": "<%= params.extensionName %>",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "<%= params.version %>",<%
+  if (params.description) { %>
+  "description": "<%= params.description %>",
+  <%} %><%
+  if (params.author) { %>
+  "author": "<%= params.author %>",
+  <% } %><%
+  if (params.license) { %>
+  "license": "<%= params.license %>",
+  <% } %><%
+  if (params.githubURL) { %>
+  "repository": {
+    "type": "git",
+    "url": "<%= params.githubURL %>.git"
+  },
+  "bugs": {
+    "url": "<%= params.githubURL %>/issues"
+  },
+  "homepage": "<%= params.githubURL %>",<% } %>
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "<%= params.theiaVersion %>"
+
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/<%= params.extensionPath %>-frontend-module"
+    }
+  ]
+}
