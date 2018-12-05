@@ -4,23 +4,48 @@
 
 A [Yeoman](https://yeoman.io) generator that scaffolds a project structure for developing extensions which contribute views to the [Theia IDE](https://github.com/theia-ide/theia).
 
-To use it, install yo and then generator
+## Installation and Usage
+### Install Yo
 
 ```console
-npm install -g yo generator-theia-extension
+npm install -g yo
 ```
 
-To create a sample project with a Theia extension, a browser app and an electron app, run
+### Clone the repository
 
 ```console
-mkdir my-extension
-yo theia-extension
+git clone git@github.com:vince-fugnitto/theia-widget-generator.git
 ```
 
-For configuration options, see
+### Create a global symlink to be able to locally run the generator
+
 ```console
-yo theia-extension --help
+cd theia-widget-generator
+npm link
 ```
+
+### Generate a new extension
+
+```console
+mkdir test-extension
+cd test-extension
+yo theia-widget
+```
+
+### Run the extension
+
+**Browser**
+
+```console
+cd browser-app/ && yarn start
+```
+
+**Electron**
+
+```console
+cd electron-app/ && yarn start
+```
+
 
 ## Publishing
 
