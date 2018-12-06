@@ -17,7 +17,7 @@ npm install -g yo
 git clone git@github.com:vince-fugnitto/theia-widget-generator.git
 ```
 
-### Create a global symlink to be able to locally run the generator
+### Create a global [symlink](https://docs.npmjs.com/cli/link) to be able to locally run the generator
 
 ```console
 cd theia-widget-generator
@@ -45,17 +45,6 @@ cd browser-app/ && yarn start
 ```console
 cd electron-app/ && yarn start
 ```
-
-
-## Publishing
-
-Follow this [instruction](https://docs.npmjs.com/cli/adduser) to login to the npm registry with a user account.
-
-If you don't have an account contact [Theia organization](https://www.npmjs.com/~theia) to request one.
-
-Publish with [np](https://github.com/sindresorhus/np#np--).
-
-    npx np
 
 ## License
 
