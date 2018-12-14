@@ -1,4 +1,7 @@
-.widget-header {
-    color: var(--theia-ui-font-color0);
-    padding: 2em;
+#widget-container h2 {
+    color: var(--theia-ui-font-color1);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px;
+    text-transform: uppercase;
 }

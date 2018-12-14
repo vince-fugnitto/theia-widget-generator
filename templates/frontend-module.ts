@@ -1,7 +1,7 @@
 import { ContainerModule } from 'inversify';
-import { <%= params.extensionPrefix %>Widget } from './<%= params.extensionPrefix %>-widget';
-import { <%= params.extensionPrefix %>Contribution } from './<%= params.extensionPrefix %>-contribution';
-import { WidgetFactory, bindViewContribution, FrontendApplicationContribution } from '@theia/core/lib/browser';
+import { <%= params.extensionPrefix %>Widget } from './<%= params.extensionPath %>-widget';
+import { <%= params.extensionPrefix %>Contribution } from './<%= params.extensionPath %>-contribution';
+import { bindViewContribution, FrontendApplicationContribution, WidgetFactory } from '@theia/core/lib/browser';
 
 import '../../src/browser/style/index.css';
 
